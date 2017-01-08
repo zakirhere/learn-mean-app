@@ -1,0 +1,30 @@
+{
+  "name": "learn-MEAN",
+  "version": "1.0.0",
+  "description": "learning MEAN app with intention to learn ng1 to ng2 upgrade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakirhere/learn-mean-app.git"
+  },
+  "keywords": [
+    "ng1-learn",
+    "ng2-learn",
+    "practice"
+  ],
+  "author": "Zakir Sayed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakirhere/learn-mean-app/issues"
+  },
+  "homepage": "https://github.com/zakirhere/learn-mean-app#readme",
+  "devDependencies": {
+    "lodash": "^4.17.4"
+  },
+  "dependencies": {
+    "typescript": "^2.1.4"
+  }
+}
