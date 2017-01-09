@@ -1,25 +1,30 @@
 "use strict";
 var _ = require("lodash");
+// interface Words {
+//     letters: string;
+//     dictionaryData: Array<string>;
+// }
 var ScrabbleFinder = (function () {
     function ScrabbleFinder(input) {
         this.printResults = function () {
             console.log('########');
             console.log(this.getAllPossibleWords(this.letters));
         };
-        this.dictionaryData = ['ABC', 'SBA', 'BAS'];
+        this.dictionaryData = ['ABC', 'SBA', 'BAS', 'CAB'];
         this.letters = input;
     }
     ScrabbleFinder.prototype.getAllPossibleWords = function (input) {
-        var possibleWords = new Anagrams().getAllCombinations;
+        var ana = new Anagrams();
+        var possibleWords = ana.getAllCombinations(input);
         var filteredWords = [];
         for (var i = 0; i < possibleWords.length; i++) {
-            if (isValidWord(possibleWords[i])) {
+            if (isValidWord(this.dictionaryData, possibleWords[i])) {
                 filteredWords.push(possibleWords[i]);
             }
         }
         return filteredWords;
-        function isValidWord(possibleWord) {
-            return _.includes(input.dictionaryData, possibleWord);
+        function isValidWord(dict, possibleWord) {
+            return _.includes(dict, possibleWord);
         }
     };
     return ScrabbleFinder;
@@ -55,6 +60,6 @@ var Anagrams = (function () {
     };
     return Anagrams;
 }());
-var check = new ScrabbleFinder("ABC");
-check.printResults();
+var comb = new ScrabbleFinder('ACB');
+comb.printResults();
 //# sourceMappingURL=scrabble-word-finder.js.map

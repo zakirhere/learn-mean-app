@@ -14,10 +14,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceRoot}/index.js",
+            "name": "scrabble-finder",
+            "program": "${workspaceRoot}/src/practice/scrabble-word-finder.js",
             "cwd": "${workspaceRoot}",
-            "outFiles": [],
             "sourceMaps": true
         },
         {

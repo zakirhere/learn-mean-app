@@ -1,16 +1,15 @@
 import _ = require('lodash');
 
-interface Words {
-    letters: string;
-    dictionaryData: Array<string>;
-}
+// interface Words {
+//     letters: string;
+//     dictionaryData: Array<string>;
+// }
 
 class ScrabbleFinder {
     dictionaryData: Array<string>;
-
     letters: string;
     constructor(input: string) {
-        this.dictionaryData = ['ABC', 'SBA', 'BAS'];
+        this.dictionaryData = ['ABC', 'SBA', 'BAS', 'CAB'];
         this.letters = input;
     }
 
@@ -19,18 +18,19 @@ class ScrabbleFinder {
         console.log(this.getAllPossibleWords(this.letters));
     }
 
-    public getAllPossibleWords(input: Words): Array<string> {
-        var possibleWords = new Anagrams().getAllCombinations;
+    public getAllPossibleWords(input: string): Array<string> {
+        var ana = new Anagrams();
+        var possibleWords = ana.getAllCombinations(input);
         var filteredWords = [];
         for (var i = 0; i < possibleWords.length; i++) {
-            if (isValidWord(possibleWords[i])) {
+            if (isValidWord(this.dictionaryData, possibleWords[i])) {
                 filteredWords.push(possibleWords[i]);
             }
         }
         return filteredWords;
 
-        function isValidWord(possibleWord) {
-            return _.includes(input.dictionaryData, possibleWord);
+        function isValidWord(dict, possibleWord): boolean {
+            return _.includes(dict, possibleWord);
         }
     }
 }
@@ -78,6 +78,5 @@ class Anagrams {
 }
 
 
-var check = new ScrabbleFinder("ABC");
-check.printResults();
-
+var comb = new ScrabbleFinder('ACB');
+comb.printResults();
