@@ -1,0 +1,16 @@
+var Startup = (function () {
+    function Startup() {
+    }
+    Startup.main = function () {
+        console.log('Hello World');
+        return 0;
+    };
+    return Startup;
+}());
+Startup.main();
+function greeter(person) {
+    return "Hello, " + person;
+}
+var user = 'zakir';
+console.log('test');
+console.log(greeter(user));

@@ -1,8 +1,19 @@
-class Startup {
-    public static main(): number {
-        console.log('Hello World');
-        return 0;
+class Student {
+    fullName: string;
+    constructor(public firstName, public lastName) {
+        this.fullName = "Full name is " + firstName + " " + lastName;
     }
 }
 
-Startup.main();
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person) {
+    return "Hello, " + person.firstName;
+}
+
+var user = new Student("Jane", "Message");
+
+document.body.innerHTML = greeter(user);
