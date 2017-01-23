@@ -14,8 +14,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "scrabble-finder",
-            "program": "${workspaceRoot}/src/practice/scrabble-word-finder.js",
+            "name": "reverse-finder",
+            "program": "${workspaceRoot}/src/practice/reverse-with-special-chars.js",
             "cwd": "${workspaceRoot}",
             "sourceMaps": true
         },

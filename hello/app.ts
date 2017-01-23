@@ -1,3 +1,5 @@
+import _ = require('lodash');
+
 class Student {
     fullName: string;
     constructor(public firstName, public lastName) {
@@ -14,6 +16,13 @@ function greeter(person: Person) {
     return "Hello, " + person.firstName;
 }
 
-var user = new Student("Jane", "Message");
+function checkInclude() {
+    var env = 'pdit.onboarding';
+    var lowerEnvironments = ['dit', 'fit', 'localhost'];
+    // return (_.includes(env , 'pdit.') || _.includes(env, lowerEnvironments));
+    if(env.match(/^pdit\./)) { return true }
+}
 
-document.body.innerHTML = greeter(user);
+var user = new Student("Jane", "Message");
+console.log(checkInclude());
+// document.body.innerHTML = greeter(user);
