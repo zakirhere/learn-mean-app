@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "typescript": "^2.1.4"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./src"
   }
 }

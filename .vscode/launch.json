@@ -6,21 +6,6 @@
     "configurations": [
         {
             "type": "node",
-            "request": "launch",
-            "name": "typescript",
-            "program": "${workspaceRoot}/src/practice/scrabble-word-finder.ts",
-            "cwd": "${workspaceRoot}/node_modules/typescript/bin/tsc"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "reverse-finder",
-            "program": "${workspaceRoot}/src/practice/reverse-with-special-chars.js",
-            "cwd": "${workspaceRoot}",
-            "sourceMaps": true
-        },
-        {
-            "type": "node",
             "request": "attach",
             "name": "Attach to Process",
             "port": 5858,
